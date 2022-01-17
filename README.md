@@ -1,3 +1,8 @@
+# About the Weather App
+
+This app lets the user see the current temperature, location, precipitation (dummy data) on google map and daily forcast for a week, clicking on the 'Show Hourly Data button shows hourly forcast upto 48 hours.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
