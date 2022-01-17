@@ -2,6 +2,11 @@
 
 This app lets the user see the current temperature, location, precipitation (dummy data) on google map and daily forcast for a week, clicking on the 'Show Hourly Data button shows hourly forcast upto 48 hours.
 
+Screenshots:
+
+![1](https://user-images.githubusercontent.com/16819919/149714354-676c8a51-395f-4e5f-b867-1017f95c40da.png)
+![2](https://user-images.githubusercontent.com/16819919/149714517-5b8ec264-c135-4b45-8b99-8d0962e50cab.png)
+![3](https://user-images.githubusercontent.com/16819919/149714558-f5b37b89-6018-4d87-81bc-98d2c0c8ec2e.png)
 
 # Getting Started with Create React App
 
