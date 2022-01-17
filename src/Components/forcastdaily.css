@@ -1,0 +1,17 @@
+.pointer {
+    cursor: pointer
+}
+
+.outer-container {
+    width: 300px;
+    height: 320px;
+    overflow: auto;
+    background-color: #cadde7;
+}
+
+.cardTitle {
+    padding-left:4%
+}
+.card-body {
+    background-color: #cadde7;
+}

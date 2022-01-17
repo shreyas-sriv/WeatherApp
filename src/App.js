@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import { WeatherApp } from './Components/WeatherApp';
 import './App.css';
 
 function App() {
+
+  const [latitude,setLatitude] = useState(11);
+  const [longitude,setLongitude] = useState(11);
+  const [ currentLocation, setCurrentLocation ] = useState({});
+  const [status,setStatus] = useState('');
+
+  useEffect(()=>{
+    getLocation();
+  },[]);
+  
+  
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(currentPosition, errorPosition);
+    }
+  };
+  function currentPosition(position) {
+    setLatitude(position.coords.latitude);
+    setLongitude(position.coords.longitude);
+     setCurrentLocation({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+     });
+     setStatus('success')
+  
+  }
+  function errorPosition() {
+    console.log('could not locate');
+  }
+  
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+              <h1 className = "Header">Weather</h1>
+              <div className='Body'>{status==='success'&&<WeatherApp lat ={latitude} lon = {longitude} currentLocation = {currentLocation}/>}</div>
     </div>
   );
 }
